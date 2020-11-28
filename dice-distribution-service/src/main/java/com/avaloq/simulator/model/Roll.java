@@ -2,6 +2,9 @@ package com.avaloq.simulator.model;
 
 import lombok.Data;
 
+/**
+ * Roll class
+ */
 @Data
 public class Roll {
 

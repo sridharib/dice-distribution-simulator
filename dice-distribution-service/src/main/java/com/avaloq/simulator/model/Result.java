@@ -6,6 +6,9 @@ import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * Result class for DiceDistributionService
+ */
 @Data
 @AllArgsConstructor
 public class Result {

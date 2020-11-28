@@ -2,6 +2,9 @@ package com.avaloq.simulator.service;
 
 import com.avaloq.simulator.model.Result;
 
+/**
+ * Service interface for dice distribution
+ */
 public interface DiceDistributionService {
 
 	/**

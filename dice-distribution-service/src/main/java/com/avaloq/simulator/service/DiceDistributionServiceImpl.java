@@ -13,6 +13,9 @@ import com.avaloq.simulator.model.Roll;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Service implementation of DiceDistributionService
+ */
 @Slf4j
 @Service
 public class DiceDistributionServiceImpl implements DiceDistributionService {
@@ -30,8 +33,8 @@ public class DiceDistributionServiceImpl implements DiceDistributionService {
 			int sum = 0;
 			for (int j = 1; j <= numberOfDice; j++) {
 				int diceVal = randomDiceValue(1, sidesOfDice);
-				log.info("\tDice {} value {}", j, diceVal);
 				sum += diceVal;
+				log.info("\tDice {} value {}", j, diceVal);
 			}
 			log.info("\tsum {}", sum);
 
@@ -48,7 +51,7 @@ public class DiceDistributionServiceImpl implements DiceDistributionService {
 	}
 
 	/**
-	 * Method to generate a random dice value
+	 * Method to generate a random dice value within a given range
 	 * 
 	 * @param min
 	 * @param max
