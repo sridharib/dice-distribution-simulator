@@ -1,6 +1,7 @@
 package com.avaloq.simulator.service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,9 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class DiceDistributionServiceImpl implements DiceDistributionService {
 
+	/*
+	 * {@inheritDoc}
+	 */
 	@Override
 	public Result rollDice(int numberOfDice, int sidesOfDice, int numberOfRolls) {
 
@@ -40,9 +44,16 @@ public class DiceDistributionServiceImpl implements DiceDistributionService {
 			details.put(sum, occurrence);
 		}
 
-		return new Result(rolls, details, null);
+		return new Result(rolls, details, Collections.emptyList());
 	}
 
+	/**
+	 * Method to generate a random dice value
+	 * 
+	 * @param min
+	 * @param max
+	 * @return the random dice value
+	 */
 	private int randomDiceValue(int min, int max) {
 
 		return (int) ((Math.random() * (max - min + 1)) + min);
